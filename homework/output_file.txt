@@ -1,0 +1,4 @@
+This is a string
+
+10
+20.0

@@ -1,0 +1,28 @@
+import numpy as np
+import math
+
+def is_diagonally_dominant(A):
+    n = len(A)
+    for i in range(n):
+        diagonal = abs(A[i][i])
+        non_diag_sum = 0
+
+        for j in range(n):
+            if i != j:
+                non_diag_sum += abs(A[i][j])
+        if diagonal==non_diag_sum:
+            return False
+    return True
+
+
+
+matrix = np.array([[4,-1,0,0], 
+                [0,2,0,0],
+                [0,0,3,0],
+                [0,0,0,1]])
+
+is_diagonally_dominant(matrix)
+
+print(matrix)
+print("Is the matrix is diagonally dominant? ", is_diagonally_dominant(matrix))
+
